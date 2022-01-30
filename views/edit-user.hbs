@@ -1,0 +1,23 @@
+
+
+
+{{#each rows}}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/main">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{this.first_name}}</li>
+  </ol>
+</nav>
+{{/each}}
+
+{{#if alert}}
+<div class="alert alert-success">
+    {{alert}}
+</div>
+{{/if}}
+
+{{#each rows}}
+<form class="row g-3 needs-validation" action="/edituser/{{this.id}}" method="post" novalidate>
+    {{> user-form}}
+</form>
+{{/each}}

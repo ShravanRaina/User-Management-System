@@ -1,0 +1,25 @@
+<style>
+  body{
+    background-color: white;
+  }
+</style>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/main">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Add User</li>
+  </ol>
+</nav>
+
+{{#if alert}}
+<div class="alert alert-success">
+    {{alert}}
+</div>
+{{/if}}
+
+
+
+
+<form class="row g-3 needs-validation" action="/adduser" method="post" novalidate>
+    {{> user-form}}
+</form>

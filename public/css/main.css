@@ -1,0 +1,64 @@
+body{
+    background-color: rgb(140, 197, 226);
+    /* background-color: rgb(203, 240, 195); */
+}
+
+.adduserbtn{
+    display: block;
+    width: 115px;
+    height: 45px;
+    /* background-color: #3aadf5; */
+    background-color: rgb(59, 119, 204);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.deleteallbtn{
+    display: block;
+    width: 115px;
+    height: 45px;
+    /* background-color: #3aadf5; */
+    background-color: rgb(221, 92, 92);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.funcbtn{
+    display:inline;
+    width: 80px;
+    height: 45px;
+    background-color:whitesmoke;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.adduserbtn:hover{
+    color: rgb(224, 224, 224);
+}
+
+.funcbtn:hover{
+    background-color:rgb(150, 150, 150);
+    color: black;
+}
+
+.rem{
+    width: 170px;
+}
+
+.logout{
+    margin-left: 76em;
+    margin-top: -8px;
+    margin-bottom: 10px;
+}

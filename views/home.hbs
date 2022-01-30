@@ -1,0 +1,50 @@
+
+<form action="/logout" method="post" class="logout">
+  <button type="submit" class="btn btn-secondary btn-md" style="margin-right: 30px;">Logout</button>
+</form>
+
+<div class="row">
+  <div class="col-6"><h1>Users</h1></div>
+
+  <div class="col-3 d-flex justify-content-end">
+    <a href="/adduser" type="button" class="adduserbtn align-self-center" style="margin-bottom: 10.5px;">+ Add User</a>
+  </div>
+
+  <form action="/deleteall" method="post" class="col-3">
+    <div class="d-flex">
+      <button type="submit" class="btn btn-danger btn-md deleteallbtn">Delete All</button>
+    </div>
+  </form>
+  
+  
+</div>
+
+<table class="table table-bordered border-dark">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">S.No.</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col" class="text-end">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each rows}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.first_name}}</td>
+      <td>{{this.last_name}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.phone}}</td>
+      <td class="text-end">
+          <a href="/viewuser/{{this.id}}" type="button" class="funcbtn ">View</a>
+          <a href="/edituser/{{this.id}}" type="button" class="funcbtn ">Edit</a>
+          <a href="/{{this.id}}" type="button" class="funcbtn ">Delete</a>
+          <a href="/remove/{{this.id}}" type="button" class="funcbtn rem">Mark As Removed</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
